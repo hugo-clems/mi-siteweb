@@ -2,7 +2,6 @@ imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
     - { resource: services.yml }
-    - { resource: "@MyfreelanceBundle/Resources/config/services.yml" }
     - { resource: "@UserBundle/Resources/config/services.yml" }
     - { resource: "@NIBundle/Resources/config/services.yml" }
 
@@ -75,7 +74,7 @@ swiftmailer:
     spool: { type: memory }
     
 fos_user:
-    db_driver: orm #other valid values are 'mongodb' and 'couchdb'
+    db_driver: orm
     firewall_name: main
     user_class: NIBundle\Entity\Utilisateur
     from_email:
