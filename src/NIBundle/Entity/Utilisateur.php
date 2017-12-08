@@ -36,6 +36,13 @@ class Utilisateur extends BaseUser
      */
     private $messagesList;
 
+    /**
+     * @var object
+     *
+     * @ORM\OneToMany(targetEntity="Evenement", mappedBy="organisateur")
+     */
+    private $evenementsListe;
+
 
     /**
      * Get id
