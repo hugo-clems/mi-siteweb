@@ -1,3 +1,7 @@
 ni_homepage:
     path:     /
     defaults: { _controller: NIBundle:Default:index }
+
+coucou:
+  path: /coucou
+  defaults:  { _controller: NIBundle:Default:coucou }

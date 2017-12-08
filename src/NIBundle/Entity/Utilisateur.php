@@ -29,7 +29,27 @@ class Utilisateur extends BaseUser
      */
     protected $id;
 
+    /**
+     * @var object
+     *
+     * @ORM\OneToMany(targetEntity="Message", mappedBy="utilisateur")
+     */
+    private $messagesList;
 
+    /**
+     * @var object
+     *
+     * @ORM\OneToMany(targetEntity="Evenement", mappedBy="organisateur")
+     */
+    private $evenementsListe;
+
+
+    /**
+     * @var int
+     *
+     * @ORM\ManyToMany(targetEntity="Utilisateur", mappedBy="utilisateursList")
+     */
+    private $groupesList;
     /**
      * Get id
      *
