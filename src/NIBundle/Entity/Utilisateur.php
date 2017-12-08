@@ -29,6 +29,13 @@ class Utilisateur extends BaseUser
      */
     protected $id;
 
+    /**
+     * @var object
+     *
+     * @ORM\OneToMany(targetEntity="Message", mappedBy="utilisateur")
+     */
+    private $messagesList;
+
 
     /**
      * Get id

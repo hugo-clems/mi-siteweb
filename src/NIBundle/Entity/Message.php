@@ -35,6 +35,14 @@ class Message
      */
     private $date;
 
+    /**
+     * @var stirng
+     *
+     * @ORM\ManyToOne(targetEntity="Utilisateur", inversedBy="messagesList")
+     * @ORM\JoinColumn(name="utilisateur", referencedColumnName="id")
+     */
+    private $utilisateur;
+
 
     /**
      * Get id
