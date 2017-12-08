@@ -35,6 +35,15 @@ class Danger
      */
     private $detail;
 
+    /**
+    * @ORM\ManyToOne(targetEntity="TypeDanger",inversedBy="dangerList")
+    */
+    private $typeDanger;
+
+    /**
+    * @ORM\ManyToOne(targetEntity="Localisation",inversedBy="dangerList")
+    */
+    private $localisation;
 
     /**
      * Get id

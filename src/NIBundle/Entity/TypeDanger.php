@@ -56,6 +56,11 @@ class TypeDanger
      */
     private $duree;
 
+    /**
+    * @ORM\OneToMany(targetEntity="Danger",mappedBy="typeDanger")
+    *
+    */
+    private $dangerList;
 
     /**
      * Get id
