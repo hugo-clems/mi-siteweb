@@ -12,8 +12,11 @@ use Symfony\Component\Serializer\Serializer;
 class DefaultController extends Controller
 {
 
-    private $serializer;
+    protected $serializer;
 
+    /**
+     * Instancie le normalizer
+     */
     public function __construct()
     {
         $encoders = [new JsonEncoder()];
@@ -21,18 +24,22 @@ class DefaultController extends Controller
         $this->serializer = new Serializer($normalizers, $encoders);
     }
 
-    public function indexAction()
+    public function exampleAction()
     {
-        return $this->render('NIBundle:Default:index.html.twig');
+        $em = $this->getDoctrine()->getManager();
+        $users = $em->getRepository('NIBundle:Utilisateur')->findAll();
+        return $this->formatJsonResponse($users);
     }
 
-    public function coucouAction(){
-        $em = $this->getDoctrine()->getManager();
-
-        $users = $em->getRepository("NIBundle:Utilisateur")->findAll();
-
-        $rep = new Response($this->serializer->serialize($users, 'json'));
-
+    /**
+     * Ajoute les headers qu'il faut pour la réponse
+     * @param $resultats
+     * @return mixed
+     */
+    public final function formatJsonResponse($resultats)
+    {
+        $resultatsSerialized = $this->serializer->serialize($resultats, 'json');
+        $rep = new Response($resultatsSerialized);
         $rep->headers->set('Content-Type', 'application/json');
         $rep->setCharset('utf-8');
         return $rep;
