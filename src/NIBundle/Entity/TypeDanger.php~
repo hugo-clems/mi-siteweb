@@ -191,45 +191,5 @@ class TypeDanger
     {
         return $this->duree;
     }
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->dangerList = new \Doctrine\Common\Collections\ArrayCollection();
-    }
-
-    /**
-     * Add dangerList
-     *
-     * @param \NIBundle\Entity\Danger $dangerList
-     *
-     * @return TypeDanger
-     */
-    public function addDangerList(\NIBundle\Entity\Danger $dangerList)
-    {
-        $this->dangerList[] = $dangerList;
-
-        return $this;
-    }
-
-    /**
-     * Remove dangerList
-     *
-     * @param \NIBundle\Entity\Danger $dangerList
-     */
-    public function removeDangerList(\NIBundle\Entity\Danger $dangerList)
-    {
-        $this->dangerList->removeElement($dangerList);
-    }
-
-    /**
-     * Get dangerList
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getDangerList()
-    {
-        return $this->dangerList;
-    }
 }
+

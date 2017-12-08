@@ -5,3 +5,15 @@ ni_homepage:
 coucou:
   path: /coucou
   defaults:  { _controller: NIBundle:Default:coucou }
+
+ni_bundle_get_all_type_danger:
+  path: /get_all_type_danger
+  defaults: { _controller: NIBundle:Danger:getAllTypeDanger }
+
+ni_bundle_get_all_danger_around:
+  path: /get_all_danger_around
+  defaults: { _controller: NIBundle:Danger:getAllDangerAround }
+
+ni_bundle_new_danger:
+  path: /new_danger
+  defaults: { _controller: NIBundle:Danger:newDanger }

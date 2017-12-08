@@ -61,5 +61,106 @@ class Utilisateur extends BaseUser
     }
 
 
-}
 
+    /**
+     * Add messagesList
+     *
+     * @param \NIBundle\Entity\Message $messagesList
+     *
+     * @return Utilisateur
+     */
+    public function addMessagesList(\NIBundle\Entity\Message $messagesList)
+    {
+        $this->messagesList[] = $messagesList;
+
+        return $this;
+    }
+
+    /**
+     * Remove messagesList
+     *
+     * @param \NIBundle\Entity\Message $messagesList
+     */
+    public function removeMessagesList(\NIBundle\Entity\Message $messagesList)
+    {
+        $this->messagesList->removeElement($messagesList);
+    }
+
+    /**
+     * Get messagesList
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getMessagesList()
+    {
+        return $this->messagesList;
+    }
+
+    /**
+     * Add evenementsListe
+     *
+     * @param \NIBundle\Entity\Evenement $evenementsListe
+     *
+     * @return Utilisateur
+     */
+    public function addEvenementsListe(\NIBundle\Entity\Evenement $evenementsListe)
+    {
+        $this->evenementsListe[] = $evenementsListe;
+
+        return $this;
+    }
+
+    /**
+     * Remove evenementsListe
+     *
+     * @param \NIBundle\Entity\Evenement $evenementsListe
+     */
+    public function removeEvenementsListe(\NIBundle\Entity\Evenement $evenementsListe)
+    {
+        $this->evenementsListe->removeElement($evenementsListe);
+    }
+
+    /**
+     * Get evenementsListe
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getEvenementsListe()
+    {
+        return $this->evenementsListe;
+    }
+
+    /**
+     * Add groupesList
+     *
+     * @param \NIBundle\Entity\Utilisateur $groupesList
+     *
+     * @return Utilisateur
+     */
+    public function addGroupesList(\NIBundle\Entity\Utilisateur $groupesList)
+    {
+        $this->groupesList[] = $groupesList;
+
+        return $this;
+    }
+
+    /**
+     * Remove groupesList
+     *
+     * @param \NIBundle\Entity\Utilisateur $groupesList
+     */
+    public function removeGroupesList(\NIBundle\Entity\Utilisateur $groupesList)
+    {
+        $this->groupesList->removeElement($groupesList);
+    }
+
+    /**
+     * Get groupesList
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getGroupesList()
+    {
+        return $this->groupesList;
+    }
+}

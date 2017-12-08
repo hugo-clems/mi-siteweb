@@ -48,11 +48,7 @@ class Danger
     public static function generateDanger($nombreNom, $detail, $typeDanger, $localisation) {
         $danger = new Danger();
         $danger->setNombreNon($nombreNom);
-        $danger->setDetail($detail);
-        $danger->setTypeDanger($typeDanger);
-        $danger->setLocalisation($localisation);
-
-        return $danger;
+        $danger->setDetail();
     }
 
     /**
@@ -112,52 +108,5 @@ class Danger
     {
         return $this->detail;
     }
-
-    /**
-     * Set typeDanger
-     *
-     * @param \NIBundle\Entity\TypeDanger $typeDanger
-     *
-     * @return Danger
-     */
-    public function setTypeDanger(\NIBundle\Entity\TypeDanger $typeDanger = null)
-    {
-        $this->typeDanger = $typeDanger;
-
-        return $this;
-    }
-
-    /**
-     * Get typeDanger
-     *
-     * @return \NIBundle\Entity\TypeDanger
-     */
-    public function getTypeDanger()
-    {
-        return $this->typeDanger;
-    }
-
-    /**
-     * Set localisation
-     *
-     * @param \NIBundle\Entity\Localisation $localisation
-     *
-     * @return Danger
-     */
-    public function setLocalisation(\NIBundle\Entity\Localisation $localisation = null)
-    {
-        $this->localisation = $localisation;
-
-        return $this;
-    }
-
-    /**
-     * Get localisation
-     *
-     * @return \NIBundle\Entity\Localisation
-     */
-    public function getLocalisation()
-    {
-        return $this->localisation;
-    }
 }
+

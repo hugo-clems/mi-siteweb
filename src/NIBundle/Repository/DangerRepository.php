@@ -10,4 +10,19 @@ namespace NIBundle\Repository;
  */
 class DangerRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function findAllByLocation($x, $y) {
+        $qb = $this->createQueryBuilder('d');
+
+        $query = $qb
+            //->from('Danger d')
+            ->leftJoin('d.localisation', 'l')
+            ->where($qb->expr()->eq('l.x', ':x'))
+            ->andWhere($qb->expr()->eq('l.y', ':y'))
+            ->setParameters(array(
+                    'x' => $x,
+                    'y' => $y ))
+            ->getQuery();
+
+        return $query->getResult();
+    }
 }

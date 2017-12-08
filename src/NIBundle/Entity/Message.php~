@@ -108,52 +108,5 @@ class Message
     {
         return $this->date;
     }
-
-    /**
-     * Set utilisateur
-     *
-     * @param \NIBundle\Entity\Utilisateur $utilisateur
-     *
-     * @return Message
-     */
-    public function setUtilisateur(\NIBundle\Entity\Utilisateur $utilisateur = null)
-    {
-        $this->utilisateur = $utilisateur;
-
-        return $this;
-    }
-
-    /**
-     * Get utilisateur
-     *
-     * @return \NIBundle\Entity\Utilisateur
-     */
-    public function getUtilisateur()
-    {
-        return $this->utilisateur;
-    }
-
-    /**
-     * Set groupe
-     *
-     * @param \NIBundle\Entity\Groupe $groupe
-     *
-     * @return Message
-     */
-    public function setGroupe(\NIBundle\Entity\Groupe $groupe = null)
-    {
-        $this->groupe = $groupe;
-
-        return $this;
-    }
-
-    /**
-     * Get groupe
-     *
-     * @return \NIBundle\Entity\Groupe
-     */
-    public function getGroupe()
-    {
-        return $this->groupe;
-    }
 }
+
