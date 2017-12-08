@@ -26,6 +26,13 @@ class DefaultController extends Controller
 
     public function exampleAction()
     {
+<<<<<<< HEAD
+=======
+        return new Response("coucou");
+    }
+
+    public function coucouAction(){
+>>>>>>> origin/clear_project
         $em = $this->getDoctrine()->getManager();
         $users = $em->getRepository('NIBundle:Utilisateur')->findAll();
         return $this->formatJsonResponse($users);

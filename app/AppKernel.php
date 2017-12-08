@@ -15,15 +15,12 @@ class AppKernel extends Kernel
             new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
-            new AppBundle\AppBundle(),
-            new MyfreelanceBundle\MyfreelanceBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new UserBundle\UserBundle(),
             new Craue\FormFlowBundle\CraueFormFlowBundle(),
             new Knp\Bundle\SnappyBundle\KnpSnappyBundle(),
             new Ensepar\Html2pdfBundle\EnseparHtml2pdfBundle(),
             new Spraed\PDFGeneratorBundle\SpraedPDFGeneratorBundle(),
-            new PUGX\MultiUserBundle\PUGXMultiUserBundle(),
             new NIBundle\NIBundle(),
         ];
 
