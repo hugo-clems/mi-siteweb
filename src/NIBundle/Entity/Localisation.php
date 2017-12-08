@@ -56,6 +56,13 @@ class Localisation
     private $dangerList;
 
     /**
+     * @var object
+     *
+     * @ORM\OneToMany(targetEntity="Evenement", mappedBy="localisation")
+     */
+    private $evenementList;
+
+    /**
      * Get id
      *
      * @return int
