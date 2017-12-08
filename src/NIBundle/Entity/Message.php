@@ -43,6 +43,13 @@ class Message
      */
     private $utilisateur;
 
+    /**
+     * @var int
+     *
+     * @ORM\ManyToOne(targetEntity="Groupe", inversedBy="messagesList")
+     * @ORM\JoinColumn(name="groupe", referencedColumnName="id")
+     */
+    private $groupe;
 
     /**
      * Get id

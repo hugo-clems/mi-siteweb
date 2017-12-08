@@ -45,6 +45,12 @@ class Utilisateur extends BaseUser
 
 
     /**
+     * @var int
+     *
+     * @ORM\ManyToMany(targetEntity="Utilisateur", mappedBy="utilisateursList")
+     */
+    private $groupesList;
+    /**
      * Get id
      *
      * @return int
