@@ -58,6 +58,13 @@ class Evenement
     private $organisateur;
 
     /**
+     * @var object
+     *
+     * @ORM\OneToMany(targetEntity="Groupe", mappedBy="evenement")
+     */
+    private $groupeList;
+
+    /**
      * Get id
      *
      * @return int

@@ -44,6 +44,13 @@ class Groupe
     private $utilisateursList;
 
     /**
+     * @var object
+     *@ORM\ManyToOne(targetEntity="Evenement", inversedBy="groupeList")
+     * @ORM\JoinColumn(name="evenement", referencedColumnName="id")
+     */
+    private $evenement;
+
+    /**
      * Get id
      *
      * @return int
